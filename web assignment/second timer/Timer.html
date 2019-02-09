@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="timer.css"/>
+<body> 
+<div>
+ <form > 
+ <input type="text" class='t' value="0" id="txt1"/>
+  <input type="button" class='b' value="start" id="b1"/> 
+  <input type="button" class='b' value="stop" id="b3"/>
+  <input type="button" class='b' value="reset" id="b2"/>
+ </form>
+
+<text>
+<textarea height="100px" name="ta" id='ta'></textarea>
+<button class='c' id='b4'>record</button>
+<button class='c' id='b5'>clear</button>
+</text>
+</div>
+</body> 
+</html> 
+<script language="JavaScript" type="text/javascript"> 
+<!-- 
+//get the id from form 
+var txt=document.getElementById('txt1');
+var btnStart=document.getElementById('b1');
+var btnReset=document.getElementById('b2');
+var btnStop=document.getElementById('b3');
+var btnRecord=document.getElementById('b4');
+var btnClear=document.getElementById('b5');
+var textarea=document.getElementById('ta');
+
+//define the timer
+var id; 
+//每10毫秒该值增加1 
+var seed=0; 
+
+btnStart.onclick=function(){ 
+   
+    id=window.setInterval(tip,10); //every 0.01second execute the tip function  
+  
+} 
+
+btnReset.onclick=function(){ 
+  seed=0; 
+  txt.value='0';
+} 
+btnStop.onclick=function(){
+	clearInterval(id);
+}
+
+function tip(){ 
+  seed++; 
+  txt.value=seed/100; 
+} 
+
+btnRecord.onclick=function(){
+	textarea.innerHTML+=txt.value +"s"+"\n";
+	
+	
+}
+btnClear.onclick=function(){
+	textarea.innerHTML="";
+}
+
+
+
+</script>

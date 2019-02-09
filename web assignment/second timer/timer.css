@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+
+form {
+	margin-top:-30px;
+	
+}
+div{
+	background-color:#FF9;
+	margin:20px;
+	padding: 100px;
+	margin:0px auto;
+	margin-top:50px;
+	padding-top:100px;
+	
+	width:500px;
+	height:300px;
+	 }
+textarea{
+		margin-top:100px;
+	font-size: 15px;
+	width:300px;
+	height:200px;
+		 
+	 }
+	 .b{
+		 width:80px;
+	height:40px;
+	background-color:#3FF;
+	margin-top:25px;
+	margin-bottom:25px;
+	margin-left:5px;
+	padding:5px;
+	font-size:18px;
+
+	 }
+	
+	 .c{
+		  width:80px;
+	height:40px;
+	background-color:#6F6;
+	margin-top:25px;
+	margin-bottom:25px;
+	margin-left:5px;
+	padding:5px;
+	font-size:18px;
+	
+	 }
