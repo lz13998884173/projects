@@ -1,0 +1,3 @@
+1.运行3个sql文件建表
+2.运行NodeJsApplication里的main.js，main2.js,main3.js
+3.运行HTML5Application2里的register.html。注册和登录分为客户端和司机端，两个登录方式的界面和功能不同

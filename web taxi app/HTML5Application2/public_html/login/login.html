@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;"/>
+<title>login</title>
+<link rel="stylesheet" type="text/css" href="http://cdn.bootcss.com/layer/3.0.1/mobile/need/layer.css" />
+<link rel="stylesheet" type="text/css" href="css/login.css" />
+<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="js/phone.js" ></script>
+<script type="text/javascript" src="http://cdn.bootcss.com/layer/3.0.1/mobile/layer.min.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+    
+  $(function () {
+    $("#login").click(function () {
+      if ($("#user").val().length == 0){
+        return alert("please input username!");
+      }
+      if ($("#password").val().length == 0){
+        return alert("please input password!");
+      }
+     
+      $.ajax({
+        url:"http://localhost:3010/login",
+        type:"POST",
+        data:{
+          username:$("#user").val(),
+          password:$("#password").val(),
+		  user:$("#select").val()
+        },
+        success:function (res) {
+            
+          alert(res);
+		  if(res=="customer login successful!"){
+		  self.location='../main page/location.html';
+                  //window.open("www.baidu.com");
+		  }
+                  if(res=="driver login successful!"){
+                      self.location='../main page/GetOrder.html';
+                  }
+        },
+        error:function (err) {
+          console.log(err);
+        }
+      })
+ 
+    })
+  });
+</script>
+</head>
+
+<body>
+<div class="whole">
+	<div class="title">Welcome to Locaticus</div>
+    <div class="coordinates-icon">
+    	<div class="coordinates topAct">
+        	<img src="image/coordinates.png" />
+        </div>
+        <div class="circle-1-1 circle-show-2"></div>
+        <div class="circle-2-2 circle-show-1"></div>
+        <div class="circle-3-3 circle-show"></div>
+        
+    </div>
+    <div class="login-form">
+    	<form action="#">
+            
+        	<div class="user-name common-div">
+            	<span class="eamil-icon common-icon">
+                	<img src="image/eamil.png" />
+                </span>
+                    
+                <input type="email" name="username" id="user" value="" placeholder="E-mail address" />        
+            </div>
+            <div class="user-pasw common-div">
+            	<span class="pasw-icon common-icon">
+                	<img src="image/password.png" />
+                </span>
+                <input type="password" name="password" id="password" value="" placeholder="******" />        
+            </div>
+            <div class="login-btn common-div" id="login">Sign in</div>
+        </form>
+    </div>
+    <div class="forgets">
+    
+        <a href="regist.html" id="register">New here?Sign up</a>
+    </div>
+        
+    <select id="select">
+  <option value ="Customer">Customer</option>
+  <option value ="Driver">Driver</option>
+  </select> 
+</div>
+</body>
+</html>
