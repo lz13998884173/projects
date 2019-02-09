@@ -1,0 +1,66 @@
+.d1{
+	margin:auto;
+	margin-top:5%;
+	text-align:center;
+
+	width:800px;
+	height:450px;
+
+}
+html,body{
+	margin: 0;
+	padding: 0;
+	background: url('weather.jpg');
+	repeat: no-repeat;
+	background-attachment:fixed;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='weather.jpg', sizingMethod=scale);
+	-ms-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='weather.jpg', sizingMethod=scale);
+	background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+}
+.d2{
+	margin:auto;
+	text-align:center;
+	color:#000;
+}
+h1{
+	padding-top:30px;
+	}
+a{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:22px;
+	 text-decoration: none;
+	}
+label{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:22px;
+	}
+input{
+	width:80px;
+	}
+.t1{
+	border: 2px solid green ;
+
+  width: 300px;
+	margin-left: 30%;
+	color:fuchsia;
+
+}
+.r1{
+	border: 2px solid yellow;
+
+}
+#weather_details{
+	margin: auto 0;
+	text-align: center;
+}
+#table{
+	margin: auto 0;
+	text-align: center;
+	color:orange;
+}
+td{
+	border: 2px solid yellow;
+
+}

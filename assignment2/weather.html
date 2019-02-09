@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>My Assignment starting page1</title>
+	<script src="weather.js"></script>
+	<script src="Chart.bundle.js"></script>
+	<link href="main.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body>
+  <div class="d1">
+  	<h1>Weather App</h1>
+  	<label>Country </label><a id="area" href="#">anywhere</a>
+    <label>City </label>
+  	<input type="text" id="cityname" /> <button id="city">Search</button>
+      <button id="show" onclick="forecast()">Weather forecast</button>
+  	<div style="width:75%;" class="d2">
+        <canvas id="canvas"></canvas>
+    </div>
+      <div id="table" style="border: solid yellow">
+          <table >
+              <tr>
+              <tr id="t0"></tr>
+                  <td id="d1"></td>
+                  <td id="d2"></td>
+                  <td id="d3"></td>
+                  <td id="d4"></td>
+                  <td id="d5"></td>
+                  <td id="d6"></td>
+                  <td id="d7"></td>
+                  <td id="d8"></td>
+              </tr>
+              <tr>
+                  <td id="d9"></td>
+                  <td id="d10"></td>
+                  <td id="d11"></td>
+                  <td id="d12"></td>
+                  <td id="d13"></td>
+                  <td id="d14"></td>
+                  <td id="d15"></td>
+                  <td id="d16"></td>
+              </tr>
+          </table>
+      </div>
+      <div id="weather_details">
+       <table class="t1">
+          <tr class="r1"><td>symbol</td> <td id="t1"></td></tr>
+        <tr class="r2"><td>windspeed</td> <td id="t2"></td></tr>
+          <tr class="r3"><td>pressure</td> <td id="t3"></td></tr>
+          <tr class="r4"><td>humidity</td> <td id="t4"></td></tr>
+          <tr class="r5"><td>clouds</td> <td id="t5"></td></tr>
+       </table>
+      </div>
+
+
+      <a id="a1" href="" onClick="weather();return false;" >Weather Information</a>
+      <a id="a2" href="" onClick="temp();return false;" >Temperature Information</a>
+  </div>
+  </body>
+</html>
+
+
+
